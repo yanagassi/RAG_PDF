@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "fa0c6349-145f-4c6f-a2ec-1021f77fe680",
+		"name": "RAG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9997540",
+		"_collection_link": "https://dark-meteor-405549.postman.co/workspace/Team-Workspace~6d1b17f9-4e26-4980-8d0d-1fcd60eead13/collection/9997540-fa0c6349-145f-4c6f-a2ec-1021f77fe680?action=share&source=collection_link&creator=9997540"
+	},
+	"item": [
+		{
+			"name": "Pergunta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"pergunta\": \"Qual é o conteúdo do documento?\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/perguntar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"perguntar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload do PDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/yanesteves/Documents/CURRICULO FINAL.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/enviar-pdf/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"enviar-pdf",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
